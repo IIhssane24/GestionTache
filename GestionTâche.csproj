@@ -1,0 +1,532 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{41D18A2A-C330-4894-920F-05B4BE83F7F7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GestionTâche</RootNamespace>
+    <AssemblyName>GestionTâche</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Acceuil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acceuil.Designer.cs">
+      <DependentUpon>Acceuil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AjouterMembre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjouterMembre.Designer.cs">
+      <DependentUpon>AjouterMembre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AjouterProjet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjouterProjet.Designer.cs">
+      <DependentUpon>AjouterProjet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AjouterTache.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjouterTache.Designer.cs">
+      <DependentUpon>AjouterTache.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppSetting.cs" />
+    <Compile Include="Authentification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Authentification.Designer.cs">
+      <DependentUpon>Authentification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalendarT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalendarT.Designer.cs">
+      <DependentUpon>CalendarT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connection.cs" />
+    <Compile Include="ConnectionString.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConnectionString.Designer.cs">
+      <DependentUpon>ConnectionString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnvoyerMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnvoyerMessage.Designer.cs">
+      <DependentUpon>EnvoyerMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListProjet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListProjet.Designer.cs">
+      <DependentUpon>ListProjet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Membres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Membres.Designer.cs">
+      <DependentUpon>Membres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MembresContrôle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MembresContrôle.Designer.cs">
+      <DependentUpon>MembresContrôle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MessageControl1.Designer.cs">
+      <DependentUpon>MessageControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Messages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Messages.Designer.cs">
+      <DependentUpon>Messages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MesTache.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MesTache.Designer.cs">
+      <DependentUpon>MesTache.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MesTacheTerminer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MesTacheTerminer.Designer.cs">
+      <DependentUpon>MesTacheTerminer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifierProjet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifierProjet.Designer.cs">
+      <DependentUpon>ModifierProjet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifierRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifierRole.Designer.cs">
+      <DependentUpon>ModifierRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifierTache.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifierTache.Designer.cs">
+      <DependentUpon>ModifierTache.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MsgBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MsgBox.Designer.cs">
+      <DependentUpon>MsgBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Projet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Projet.Designer.cs">
+      <DependentUpon>Projet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServer.cs" />
+    <Compile Include="Statistique.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistique.Designer.cs">
+      <DependentUpon>Statistique.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StatistiqueControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StatistiqueControl.Designer.cs">
+      <DependentUpon>StatistiqueControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tache.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tache.Designer.cs">
+      <DependentUpon>Tache.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TacheCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TacheCalendar.Designer.cs">
+      <DependentUpon>TacheCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TacheContrôle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TacheContrôle.Designer.cs">
+      <DependentUpon>TacheContrôle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TacheContrôleTerminer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TacheContrôleTerminer.Designer.cs">
+      <DependentUpon>TacheContrôleTerminer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TacheMembre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TacheMembre.Designer.cs">
+      <DependentUpon>TacheMembre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TacheProjet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TacheProjet.Designer.cs">
+      <DependentUpon>TacheProjet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TacheProjetTerminer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TacheProjetTerminer.Designer.cs">
+      <DependentUpon>TacheProjetTerminer.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Acceuil.resx">
+      <DependentUpon>Acceuil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AjouterMembre.resx">
+      <DependentUpon>AjouterMembre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalendarT.resx">
+      <DependentUpon>CalendarT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnvoyerMessage.resx">
+      <DependentUpon>EnvoyerMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Membres.resx">
+      <DependentUpon>Membres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MembresContrôle.resx">
+      <DependentUpon>MembresContrôle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AjouterProjet.resx">
+      <DependentUpon>AjouterProjet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AjouterTache.resx">
+      <DependentUpon>AjouterTache.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Authentification.resx">
+      <DependentUpon>Authentification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConnectionString.resx">
+      <DependentUpon>ConnectionString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListProjet.resx">
+      <DependentUpon>ListProjet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageControl1.resx">
+      <DependentUpon>MessageControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Messages.resx">
+      <DependentUpon>Messages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MesTache.resx">
+      <DependentUpon>MesTache.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MesTacheTerminer.resx">
+      <DependentUpon>MesTacheTerminer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifierProjet.resx">
+      <DependentUpon>ModifierProjet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifierRole.resx">
+      <DependentUpon>ModifierRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifierTache.resx">
+      <DependentUpon>ModifierTache.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MsgBox.resx">
+      <DependentUpon>MsgBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Projet.resx">
+      <DependentUpon>Projet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistique.resx">
+      <DependentUpon>Statistique.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatistiqueControl.resx">
+      <DependentUpon>StatistiqueControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tache.resx">
+      <DependentUpon>Tache.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TacheCalendar.resx">
+      <DependentUpon>TacheCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TacheContrôle.resx">
+      <DependentUpon>TacheContrôle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TacheContrôleTerminer.resx">
+      <DependentUpon>TacheContrôleTerminer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TacheMembre.resx">
+      <DependentUpon>TacheMembre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TacheProjet.resx">
+      <DependentUpon>TacheProjet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TacheProjetTerminer.resx">
+      <DependentUpon>TacheProjetTerminer.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\image\loginTa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\friends.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar-chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chatting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loupe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar-chart %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar-chart1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\membre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analytics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue and White Simple Start-up Business Animated Presentation %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analytics %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analytics1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue and White Simple Start-up Business Animated Presentation %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full-screen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\size.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\substract.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash-bin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\msg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notifi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxMSACAL">
+      <Guid>{8E27C92E-1264-101C-8A2F-040224009C02}</Guid>
+      <VersionMajor>7</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="MSACAL">
+      <Guid>{8E27C92E-1264-101C-8A2F-040224009C02}</Guid>
+      <VersionMajor>7</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\solutions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Yellow and Purple Corporate Teamwork Keynote Presentation %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Yellow and Purple Corporate Teamwork Keynote Presentation %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookmark %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookmark %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-andrew-neel-2312369.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-karina-zhukovskaya-6446671.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\briefing %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\true.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comp_3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\term.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\terminerS.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NonTerminer.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookmark %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alarm.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Visible.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NonVisible.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
